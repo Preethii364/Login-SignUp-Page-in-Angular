@@ -13,7 +13,7 @@ export class SignUpComponent implements OnInit {
 
   private headers = new Headers({ 'Content-Type': 'application/json'});
   signupResponse: SignUpResponseModel
-  IP_ADDRESS = "http://10.150.72.160/"
+  IP_ADDRESS = "http://api.development.com/"
 
   fetchData= function(username,pas,email,gender) {
     this.http.post(this.IP_ADDRESS+"api/v1/signup", {"username":username, "pas":pas ,"email": email, "gender":gender}).subscribe(                     //http://localhost:5555/users
@@ -22,7 +22,7 @@ export class SignUpComponent implements OnInit {
       // if (this.users('status')!='True')
         // alert ("Login failed");
       // else if (this.users('status')=='True')
-        alert ("Login "+ this.signupResponse.status +this.signupResponse.message );
+        alert ("SignUp "+ this.signupResponse.status +this.signupResponse.message );
         // alert("Login not possible");
             }
     )
