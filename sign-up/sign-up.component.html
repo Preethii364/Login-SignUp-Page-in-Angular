@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+    <div class="col-xs-7 col-sm-6 col-lg-8" text="center" ></div>
+    </div>
+
+  <!--form start-->
+  <div align="center">
+    <h1>WELCOME TO TIMES INTERNET SIGNUP PAGE!</h1>
+  <h3> Fill in these entries to register yourself.</h3>
+  <!--<section *ngIf="user"></section>-->
+  </div>
+  
+   <!--username-->
+    <form class="login-form" align="center" >
+        <div class="form-group">
+          <label class="control-label col-sm-5" for="username">
+            <span class="badge badge-secondary">
+            Username   :</span></label>
+          <div class="col-sm-7">
+            <input #username type="username" class="form-control"  placeholder="Enter username" id="username"  name="username">
+          </div>
+        </div>
+    </form>
+
+  <!--password-->
+  <form class="login-form" align="center" >
+        <div class="form-group">            
+            <label class="control-label col-sm-5" for="pswd">
+                <span class="badge badge-secondary">Password   :</span></label>
+            <div class="col-sm-7">          
+              <input type="password" #password class="form-control" id="pas" placeholder="Enter password" id="pswd" name="pswd">
+            </div>
+          </div>
+</form>
+
+   <!--email-->          
+        <form class="login-form" align="center" >
+            <div class="form-group">
+              <label class="control-label col-sm-5" for="email">
+                  <span class="badge badge-secondary">Email ID:</span></label>
+              <div class="col-sm-7">
+                <input #email type="email" class="form-control" placeholder="Enter Email Id" id="email" name="email">
+              </div>
+            </div>
+            </form>
+      
+    <!--gender-->
+        <form class="login-form" align="center" >
+            <div class="form-group">
+              <label class="control-label col-sm-5" for="gender"> <span class="badge badge-secondary">
+               Gender   :</span></label>
+              <div class="col-sm-7">
+                <input #gender type="text" class="form-control" placeholder="Input gender" id="gender" name="gender">
+              </div>
+            </div>
+            </form>
+
+     <form>
+    <div class="form-group" align="center">        
+      <div class="col-sm-12">
+        <br>
+        <button type="submit" class="btn btn-primary"  (click)="fetchData(username.value,password.value,email.value,gender.value)"> SIGN UP </button>
+
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
