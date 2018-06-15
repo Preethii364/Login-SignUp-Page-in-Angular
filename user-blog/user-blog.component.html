@@ -1,0 +1,299 @@
+<div class="bg">
+    <div class="container">
+        <div class="row">
+        <div class="col-xs-7 col-sm-6 col-lg-8" text="center" >
+           
+          
+  <form>
+  <!--form start-->
+                                                   <!--Heading-->
+  <div  align="center" >
+       <h1> WELCOME TO TIMES INTERNET BLOG! </h1>
+       <h3> Manage your posts here !</h3>
+  </div>
+
+  <br><br>
+      
+  
+                                                     <!--title>-->
+
+    
+      <div class="form-group" >
+            <!-- <div align="left">-->
+                  <label class="control-label col-sm-5" for="_title">Title :-
+                <!--  <span class="badge badge-secondary"></span>-->
+                  </label>
+             <!--</div>-->
+          
+             <!--<div class="col-sm-7" align="center">-->
+               <input [(ngModel)]="title" type="text" class="form-control" placeholder="Enter title" 
+                        id="_title"  name="title">
+             <!-- </div>-->
+      </div>
+    
+    <br><br>
+
+
+                                          <!--user_id-->
+    <!--<form class="login-form" align="center" >-->
+      <div class="form-group">
+        <label class="control-label col-sm-5" for="_userid"> User Id :-
+        <!-- <span class="badge badge-secondary">User ID   :</span>-->
+        </label>
+        <!--<div class="col-sm-7">-->
+        <input [(ngModel)]="userid"  type="text" class="form-control" placeholder="Enter user id" id="_userid"  name="userid">
+      </div>
+     
+     <!--</div>-->
+     <!--</form>-->
+        <br>
+        <br>
+
+                                                    <!--description-->
+  <!--<form class="login-form" align="center" >-->
+        <div class="form-group">            
+            <label class="control-label col-sm-5" for="_desc"> Short Description:-
+            <!--<span class="badge badge-secondary">Description   :</span>-->
+            </label>
+            <!-- <div class="col-sm-7"> -->    
+            <input [(ngModel)]="desc"  type="text" class="form-control" placeholder="Enter short description" id="_desc" name="description"> {{desc}}    
+           
+         </div>
+        <!--</div>-->
+  <!--</form>-->
+
+
+                                                    <!--post_id-->          
+  <!--<form class="login-form" align="center" >-->
+    <div class="form-group">
+      <label class="control-label col-sm-5" for="_postid">Post ID:-
+      <!--<span class="badge badge-secondary">Post ID:</span>-->
+      </label>
+      <!--<div class="col-sm-7">-->
+      <input [(ngModel)]="postid" type="text" class="form-control" placeholder="Enter Post Id" id="_postid" name="postid">
+    </div>
+          <!--  </div>-->
+           <!-- </form>-->
+            <br>
+            <br>
+      
+                                                    <!--image-->
+        <!--<form class="login-form" align="center" >-->
+
+        <div class="form-group">
+              <!-- <div *ngFor="let imgSrc of images" > -->
+              <label class="control-label col-sm-5" for="_image">Input Images:-
+                <!--<span class="badge badge-secondary">Image  :</span>-->
+              </label>
+
+             <!--<div class="col-sm-7">-->
+                <app-file-upload  type="image" 
+                        
+                        (fileUploaded)="updateImages($event)" ></app-file-upload>
+         </div>
+              <!-- </div> -->
+              <br>
+              
+                                   <!--  <button (click)="removeImage()">Delete Image</button>
+                                         <button (click)="addImage()">Add Image</button>       -->
+            
+           <!-- </form>-->
+            
+
+                                                  <!--video-->
+
+           <div class="form-group">
+                <!-- <div *ngFor="let videoSrc of videos" >  -->
+                <label class="control-label col-sm-5" for="video">Input Videos :-
+                <!-- <span class="badge badge-secondary"> Video   :</span>-->
+                </label>
+                <!--<div class="col-sm-7">-->
+                    <app-file-upload  type="video"  
+                
+                                 (fileUploaded)="updateVideos($event)" ></app-file-upload>      
+           </div>
+                <!-- </div> -->
+              <br>
+             
+                                        <!--  <button (click)="removeVideo()">(-) Delete video</button>
+                                              <button (click)="addVideo()">(+) Add video</button>      -->
+            
+          
+      
+                                                <!--author-->
+     
+            <div class="form-group">
+                  <label class="control-label col-sm-5" for="author">Author of the post:
+                  <!--<span class="badge badge-secondary">Author   :</span>-->
+                  </label>
+                  <!--<div class="col-sm-7">-->
+                  <input  [(ngModel)]="author" type="text" class="form-control" placeholder="Enter the name of the submitter" id="author"  name="author">
+            </div>
+              <!--</div>-->
+              
+          <br>
+          <br>
+
+                                      <!--visible-->
+           
+            <div class="form-group">
+                 <label class="control-label col-sm-5" for="_visible">Visibility:-
+                 <!--<span class="badge badge-secondary"> Visible   :</span>-->
+                 </label>
+                 <!--<div class="col-sm-7">-->
+                 <input  [(ngModel)]="visible" type="boolean" class="form-control" 
+                         placeholder="Visible -Yes/No" id="_visible"  name="visible">
+                
+            </div>
+           
+          <br>
+          <br>
+
+
+                                      <!--moderated-->
+           
+            <div class="form-group">
+                  <label class="control-label col-sm-5" for="moderated">Moderated :-
+                  <!-- <span class="badge badge-secondary"> Moderated   :</span>-->
+                  </label>
+                <!--<div class="col-sm-7">-->
+                  <input  [(ngModel)]="moderated"   class="form-control" 
+                  placeholder="Moderated -Yes/No" id="moderated" name="moderated">
+                <!--</div>-->
+            </div>
+          
+          <br>
+          <br>
+
+                                      <!--disp_img-->
+           
+              <div class="form-group">
+                <label class="control-label col-sm-5" for="disp_img">Display Image  :-
+                <!-- <span class="badge badge-secondary"> Display Image  :</span>-->
+                </label>
+                <!-- <div class="col-sm-7">-->
+                <input  [(ngModel)]="dispimg"  type="text" class="form-control"
+                         placeholder="Enter display image" id="disp_img"  name="disp_img">
+              </div>
+                <!-- </div>-->
+               
+          <br>
+          <br>
+
+                                      <!--cover_img-->
+
+          <div class="form-group">
+                <label class="control-label col-sm-5" for="coverimg">Cover Image:-
+               <!-- <span class="badge badge-secondary">Cover Image   :</span>-->
+                </label>
+               <!-- <div class="col-sm-7">-->
+                <input [(ngModel)]="coverimg"  type="coverimg" class="form-control" 
+                            placeholder="Enter cover image" id="coverimg"  name="coverimg">
+               <!-- </div>-->
+          </div>
+          <br>
+          <br>
+
+                                                <!--reference-->
+           
+            <div class="form-group">
+                <label class="control-label col-sm-5" for="reference">Reference:-
+                <!-- <span class="badge badge-secondary">References   :</span>-->
+                </label>
+                <!-- <div class="col-sm-7">-->
+                <input [(ngModel)]="reference"  type="text" class="form-control" 
+                        placeholder="Add references" id="reference"  name="reference">
+                <!--</div>-->
+             </div>
+          <br>
+          <br>
+
+
+                                                <!--proj_name-->
+
+              <div class="form-group">
+                 <label class="control-label col-sm-5" for="proj_name">Project name:-
+                  <!--<span class="badge badge-secondary">  Project name  :</span>-->
+                 </label>
+                <!--<div class="col-sm-7">-->
+                  <input  [(ngModel)]="projname"  type="text" class="form-control" 
+                          placeholder="Enter project name" id="proj_name"  name="proj_name">
+               <!--</div>-->
+              </div>             
+          <br>
+          <br>
+
+                                            <!--proj_id-->
+     
+          <div class="form-group">
+                <label class="control-label col-sm-5" for="proj_id">Project Id:-
+                  <!--<span class="badge badge-secondary">
+                  Project ID   :</span>-->
+                </label>
+                <!--<div class="col-sm-7">-->
+                  <input [(ngModel)]="projid"  type="text" class="form-control" 
+                           placeholder="Enter project id" id="proj_id" name="proj_id">
+                <!--</div>-->
+          </div>        
+          <br>
+          <br>
+
+        
+         
+                                            <!--type-->
+   
+      <div class="form-group" >
+                 <label class="control-label col-sm-5" for="type">Type:-
+                 <!--<span class="badge badge-secondary">Type   :</span>-->
+                 </label>
+                 <!-- <div class="col-sm-7">-->
+                 <input [(ngModel)]="type"   type="text" class="form-control" 
+                          placeholder="Enter type" id="type"  name="type">
+                 <!--</div>-->
+       </div>
+<br>
+<br>
+
+                                         <!--subtype-->
+  
+  <div class="form-group">
+      <label class="control-label col-sm-5" for="sub_type">Subtype:-
+      <!--<span class="badge badge-secondary">Subtype   :</span>-->
+      </label>
+      <!--<div class="col-sm-7">-->
+      <input [(ngModel)]="subtype"   type="text" class="form-control" placeholder="Enter subtype" id="sub_type"  name="sub_type">
+  </div>
+  <!--</div>-->
+
+<br>
+<br>
+
+                                          <!--priority-->
+<!--<form class="login-form" align="center" >-->
+  <div class="form-group">
+     <label class="control-label col-sm-5" for="priority">Priority :-
+     <!--<span class="badge badge-secondary"> Type   :</span>-->
+     </label>
+     <!--<div class="col-sm-7">-->
+     <input [(ngModel)]="priority"   type="text" class="form-control" placeholder="Enter priority" id="priority"  name="priority">
+  </div>
+  <!--</div>-->
+<!--</form>-->
+<br>
+<br>
+
+
+    <div class="form-group" align="center">        
+    <!--<div class="col-sm-12">-->
+    <br>
+    <button type="submit" class="btn btn-primary" (click)="getData()" >SUBMIT POST </button>
+    </div>
+
+  
+
+</form>
+</div>
+</div>
+</div></div>
+
+

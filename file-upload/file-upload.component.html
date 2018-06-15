@@ -1,0 +1,36 @@
+
+
+<!--<form name="form1" method="post" enctype="multipart/form-data">-->
+
+  <div class="form-group">
+
+  <div *ngIf="this.fileType == 'image'">
+  
+             <label class="control-label col-sm-2" >
+             <span class="badge badge-secondary"> Upload Images
+             </span> </label>
+             <input type="file" multiple name="images" (change)="onFileSelected($event)"  
+                   
+                             accept="{{fileTypeToAcceptImages}}">
+            
+  </div>
+
+  <div *ngIf="this.fileType == 'video'">
+  
+              <br>
+              <label class="control-label col-sm-2" >
+              <span class="badge badge-secondary"> Upload Videos 
+               </span> </label>
+               <input type="file" multiple name="images"  (change)="onFileSelected($event)" 
+                           
+                                accept="{{fileTypeToAcceptVideos}}">
+
+   </div>
+
+<button type="submit" class="btn btn-primary" (click)="onUploadFile()">Submit</button>
+</div>
+
+<!--</form>-->
+
+
+

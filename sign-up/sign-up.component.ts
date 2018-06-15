@@ -15,7 +15,7 @@ export class SignUpComponent implements OnInit {
   signupResponse: SignUpResponseModel
   IP_ADDRESS = "http://api.development.com/"
 
-  fetchData= function(username,pas,email,gender) {
+  signupData= function(username,pas,email,gender) {
     this.http.post(this.IP_ADDRESS+"api/v1/signup", {"username":username, "pas":pas ,"email": email, "gender":gender}).subscribe(                     //http://localhost:5555/users
       (res:Response)=>{
         this.signupResponse= new SignUpResponseModel( res.json() ) ;

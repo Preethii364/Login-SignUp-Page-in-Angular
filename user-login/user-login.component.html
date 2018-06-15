@@ -1,41 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Example</title>  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-<div class="container">
-    <div class="row">
+<div class="container bg">
+    <div class="row center">
     <div class="col-xs-7 col-sm-6 col-lg-8" text="center" ></div>
     </div>
 
+  
+
           <!--form start-->
- <h1>WELCOME TO TIMES INTERNET LOGIN PAGE!</h1>
+ <h1>TIMES INTERNET</h1>
   <h3> Fill in the entries to login to your account.</h3>
   <section *ngIf="user"></section>
-  
+
+    <form align="center">
+  <img src="http://www.romeljohnsantos.com/wpclients/brc/wp-content/uploads/sites/4/2017/07/noimage_male.png" class="rounded-circle center-block" alt="profile image">
+</form>
+
   <form class="login-form" align="center" >
+
+                         <!--ID-->
     <div class="form-group">
-      <label class="control-label col-sm-5" for="id">
-          <span class="badge badge-secondary">User ID:
+      <label class="control-label col-sm-12" for="id">
+          <span class="badge badge-secondary" ><h4>User ID:</h4>
           </span>
           </label>
-      <div class="col-sm-7">
-        <input #username type="id" class="form-control" id="id" placeholder="Enter id" name="id">
+      <div class="col-sm-12">
+        <input #username type="text" class="form-control" id="id" placeholder="Enter id" name="id">
       </div>
     </div>
+
+                          <!--PASSWORD-->
     <div class="form-group">
-      <label class="control-label col-sm-5" for="pswd">
-          <span class="badge badge-secondary">Password:
+      <label class="control-label col-sm-12" for="pswd">
+          <span class="badge badge-secondary" ><h4>Password:</h4>
           </span>
           </label>
-      <div class="col-sm-7">          
+      <div class="col-sm-12">          
         <input type="password" #password class="form-control" id="pswd" placeholder="Enter password" name="pswd">
       </div>
     </div>
@@ -44,13 +42,11 @@
     <div class="form-group center">        
       <div class="col-sm-12">
         <br>
-        <button type="submit" class="btn btn-primary"  (click)="fetchData(username.value, password.value )"> LOGIN </button>
+        <button type="submit" class="btn btn-primary"  (click)="ApiService.fetchData(username.value, password.value )"> LOGIN </button>
         
       </div>
     </div>
 
   </form>
-</div>
 
-</body>
-</html>
+</div>

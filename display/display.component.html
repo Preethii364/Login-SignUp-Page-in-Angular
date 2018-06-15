@@ -1,0 +1,40 @@
+<div align="center">
+    <h1>USER PROFILE!</h1>
+  <h2> Get your post details here..</h2>
+  </div>
+<div align="left">
+<h4>Title : {{displayResponse.title}}</h4> 
+<h4>Description : {{displayResponse.desc}}</h4>
+
+<div *ngIf="showDetails">
+<h4>Post Id :{{displayResponse.postid}}</h4>
+
+ <h4>Images :              <!--{{displayResponse.image}}</h4>-->
+ <img src="http://api.development.com{{filePath}}" ></h4>
+
+ <h4>Videos :              <!--{{displayResponse.video}}</h4>-->
+ <img src="http://api.development.com{{filePath}}" ></h4>
+ 
+
+<h4>Author name : {{displayResponse.author}}</h4>
+<h4>Visible: {{displayResponse.visible}}</h4>
+<h4>Moderated : {{displayResponse.moderated}}</h4>
+<h4>Cover image: {{displayResponse.coverimg}}</h4>
+<h4>Display image : {{displayResponse.dispimg}}</h4>
+<h4>Reference : {{displayResponse.reference}}</h4>
+<h4>Project name: {{displayResponse.projname}}</h4>
+<h4>Project ID : {{displayResponse.projid}}</h4>
+<h4>User ID : {{displayResponse.userid}}</h4>
+<h4>Type : {{displayResponse.type}}</h4>
+<h4>Subtype : {{displayResponse.subtype}}</h4>
+<h4>Priority : {{displayResponse.priority}}</h4>
+</div>
+</div>
+                      <div class="form-group center">        
+                      <div class="col-sm-12">
+                       <br>
+  
+    </div>
+  </div>
+
+  <input type="button" value="Get Details" (click)="toggleDetails()">

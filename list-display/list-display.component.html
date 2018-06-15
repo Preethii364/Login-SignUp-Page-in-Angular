@@ -1,0 +1,4 @@
+<div *ngFor="let post of ApiService.getPosts()">                 <!--step 1 -takes it to the getPosts method of APIService-->
+      <app-display [postdata]="post" >
+      </app-display>
+</div>
