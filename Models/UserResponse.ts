@@ -1,4 +1,4 @@
-
+SignUp_page
 export class LoginResponseModel{
     message: String;
     status: boolean;
